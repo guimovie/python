@@ -1,6 +1,8 @@
 def opcoes():
     print('1. Verificador de Numero')
     print('2. Verificador de Idade')
+    print('3. Login')
+    print('4. Plano Cartesiano')
 
 opcoes()
 
@@ -26,8 +28,31 @@ elif escolha_opcao == 2:
     if idade >= 18:
         print('Você é um(a) ADULTO')
 
-def main():
-    opcoes()
+elif escolha_opcao == 3:
+    usuario_correto = 'guimovie'
+    senha_correta = 'senha123'
+    
+    usuario = input('USUARIO:')
+    senha = input('SENHA:')
 
-if __name__ == '__main__':
-    main()
+    if usuario == usuario_correto and senha == senha_correta:
+        print('Acesso Permitido')
+    else:
+        print('ACESSO NEGADO!')
+
+elif escolha_opcao == 4:
+    print('VERIFICADOR DE QUADRANTE NO PLANO CARTESIANO')
+    
+    valor_x = float(input('DIGITE A COORDENDA X: '))
+    valor_y = float(input('DIGITE A COORDENDA Y: '))
+
+    if valor_x > 0 and valor_y > 0:
+        print('Você está no Quadrante 1.')
+    elif valor_x < 0 and valor_y > 0:
+        print('Você está no Quadrante 2.')
+    elif valor_x < 0 and valor_y < 0:
+        print('Você está no Quadrante 3.')
+    elif valor_x > 0 and valor_y < 0:
+        print('Você está no Quadrante 4.')
+    else:
+        print('O ponto está localizado no Eixo ou Origem.')
