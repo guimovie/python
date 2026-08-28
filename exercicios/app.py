@@ -5,16 +5,18 @@ restaurantes = [{'nome': 'VIP Sushi', 'categoria': 'Japonesa', 'status': False},
 def exibir_nome_do_programa():
     #print('Sabor Express\n')
     print(''' 
+    --------------------------------------------------------------------------
     ██████████████████████████████████████████████████████████████████████████
     █─▄▄▄▄██▀▄─██▄─▄─▀█─▄▄─█▄─▄▄▀███▄─▄▄─█▄─▀─▄█▄─▄▄─█▄─▄▄▀█▄─▄▄─█─▄▄▄▄█─▄▄▄▄█
     █▄▄▄▄─██─▀─███─▄─▀█─██─██─▄─▄████─▄█▀██▀─▀███─▄▄▄██─▄─▄██─▄█▀█▄▄▄▄─█▄▄▄▄─█
     ▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▀▀▄▄▄▄▀▄▄▀▄▄▀▀▀▄▄▄▄▄▀▄▄█▄▄▀▄▄▄▀▀▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀ 
+    --------------------------------------------------------------------------
     ''')
 
 def exibir_opcoes():
     print('1. Cadastrar Restaurante')
     print('2. Listar Restaurante')
-    print('3. Ativar Restaurante')
+    print('3. Status do Restaurante')
     print('4. Sair\n')
 
 def voltar_ao_menu():
@@ -23,7 +25,10 @@ def voltar_ao_menu():
 
 def exibir_titulo(texto):
     print('\033c', end = '')
+    linha = '-' * len(texto)
+    print(linha)
     print(texto)
+    print(linha)
     print()
 
 def finalizar_app():
@@ -45,11 +50,13 @@ def cadastrar_novo_restaurante():
 def listar_restaurantes():
     exibir_titulo('LISTA DOS RESTAURANTES')
 
+    print(f'{'Nome do Restaurante'.ljust(21)} | {'Categoria'.ljust(20)} | Status' )
+
     for restaurante in restaurantes:
         nome_restaurante = restaurante['nome']
         categoria = restaurante['categoria']
-        status = restaurante['status']
-        print(f'-{nome_restaurante} | {categoria} | {status}')
+        status = 'Disponível' if restaurante['status'] else 'Indisponível'
+        print(f'-{nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {status.ljust(20)}')
 
     voltar_ao_menu()
 
