@@ -17,7 +17,7 @@ else:
     print('Informação não encontrada!\n')
     
 # dicionário de número
-num = {x: x**2 for x in range(1, 6)}
+num = {x: x**2 for x in range(1, 7)}
 for n in num:
     print(f'{n} ao quadrado é {num[n]}')
 
