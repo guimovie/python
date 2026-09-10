@@ -1,17 +1,22 @@
 class Musica():
-    nome = ''
-    artista = ''
-    duracao = int
+    musicas = []
 
-musica1 = Musica()
-musica1.nome = 'Snuff'
-musica1.artista = 'Slipknot'
-musica1.duracao = 300
+    def __init__(self, nome, artista, duracao):
+        self.nome = nome
+        self.artista = artista
+        self.duracao = duracao
+        Musica.musicas.append(self)
 
-musica2 = Musica()
-musica2.nome = 'Bohemian Rhapsody'
-musica2.artista = 'Queen'
-musica2.duracao = 330 
+    def lista_musicas():
+        print('---LISTAGEM DE MÚSICAS---\n')
+        for m in Musica.musicas:
+            print(f'Nome: {m.nome}')
+            print(f'Artista: {m.artista}')
+            print(f'Duração: {m.duracao}s\n')
+    
+musica1 = Musica('Snuff', 'Slipknot', 300)
+musica2 = Musica('Bohemian Rhapsody', 'Queen', 330 )
+musica3 = Musica('Chicago', 'Michael Jackson', 320 )
+musica4 = Musica('Confortably Numb', 'Pink Floyd', 430 )
 
-print(vars(musica1))
-print(dir(musica1))
+Musica.lista_musicas()
