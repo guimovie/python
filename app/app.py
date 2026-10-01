@@ -1,4 +1,6 @@
 from modelos.restaurantes import Restaurantes
+from modelos.cardapio.prato import Prato
+from modelos.cardapio.bebida import Bebida
 
 restaurante1 = Restaurantes('Vip Sushi', 'Japonesa')
 restaurante2 = Restaurantes('Zé do Hamburguer', 'Hamburguer')
