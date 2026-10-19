@@ -13,9 +13,13 @@ restaurante1.receber_nota('Flavio', 8)
 restaurante1.receber_nota('Gustavo', 5)
 restaurante1.receber_nota('Humberto', 7)
 restaurante4.alternar_estado()
+bebida_suco = Bebida('Suco de Melancia', 10, 'G')
+prato_principal = Prato('Escargote no Buféte', 50, 'Comida chic')
+
 
 def main():
-    Restaurantes.listar_restaurantes()
+    #Restaurantes.listar_restaurantes()
+    print(bebida_suco, ',', prato_principal)
 
 if __name__ == '__main__':
     main()
