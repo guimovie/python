@@ -1,4 +1,3 @@
-from veiculos import Veiculo
 from carro import Carro
 from moto import Moto
 
@@ -14,9 +13,13 @@ moto3 = Moto('Yamaha', 'MT-09', 'Esportiva')
 
 moto1.virar_chave()
 
-print(carro1)
-print(carro2)
-print(carro3)
-print(moto1)
-print(moto2)
-print(moto3)
+def main():
+    print(carro1)
+    print(carro2)
+    print(carro3)
+    print(moto1)
+    print(moto2)
+    print(moto3)
+
+if __name__ == '__main__':
+    main()
