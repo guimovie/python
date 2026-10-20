@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 class Restaurantes():
     restaurantes = []
@@ -8,6 +9,7 @@ class Restaurantes():
         self._categoria = categoria
         self._status = False
         self._avaliacao = []
+        self._cardapio = []
         Restaurantes.restaurantes.append(self)
         
     def __str__(self):
@@ -43,17 +45,6 @@ class Restaurantes():
         media = round(soma_das_notas / num_de_avaliacoes, 1)
         return media
     
-'''
-restaurante1 = Restaurantes('Pizza Planet', 'Fast Food')
-restaurante1.alternar_estado()
-restaurante2 = Restaurantes('Ligeirinhos', 'Hamburguer')
-restaurante3 = Restaurantes('Comida da vovó', 'Caseiro')
-restaurante4 = Restaurantes('Burguer King', 'Hamburguer')
-
-Restaurantes.listar_restaurantes()
-'''
-
-'''
-print(restaurante1)
-print(restaurante2)
-'''
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append(item)

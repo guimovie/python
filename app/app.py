@@ -13,8 +13,11 @@ restaurante1.receber_nota('Flavio', 8)
 restaurante1.receber_nota('Gustavo', 5)
 restaurante1.receber_nota('Humberto', 7)
 restaurante4.alternar_estado()
+
 bebida_suco = Bebida('Suco de Melancia', 10, 'G')
 prato_principal = Prato('Escargote no Buféte', 50, 'Comida chic')
+restaurante1.adicionar_no_cardapio(bebida_suco)
+restaurante1.adicionar_no_cardapio(prato_principal)
 
 
 def main():
