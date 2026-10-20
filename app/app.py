@@ -22,7 +22,7 @@ restaurante1.adicionar_no_cardapio(prato_principal)
 
 def main():
     #Restaurantes.listar_restaurantes()
-    print(bebida_suco, ',', prato_principal)
+    restaurante1.exibir_cardapio
 
 if __name__ == '__main__':
     main()
