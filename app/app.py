@@ -15,7 +15,9 @@ restaurante1.receber_nota('Humberto', 7)
 restaurante4.alternar_estado()
 
 bebida_suco = Bebida('Suco de Melancia', 10, 'G')
+bebida_suco.aplicar_desconto()
 prato_principal = Prato('Escargote no Buféte', 50, 'Comida chic')
+prato_principal.aplicar_desconto()
 restaurante1.adicionar_no_cardapio(bebida_suco)
 restaurante1.adicionar_no_cardapio(prato_principal)
 
